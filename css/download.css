@@ -1,0 +1,115 @@
+body{min-height:700px;min-width: 1200px;}
+.fl{float:left;}
+.td-width{width:549px;}
+.w{margin:0 auto;width:980px;}
+*{margin:0;padding:0;list-style:none;}
+a{text-decoration: none;}
+/**---------------------**/
+
+.banner_top{height:210px; background:url(../img/banner_top.jpg) no-repeat top center;margin:0 auto; overflow:hidden;}
+.banner_h2{text-shadow: 0px 0px 5px #f28e98;color:#8ba4c3;}
+
+
+.banner_top ul{font: 14px "宋体", Arial, Helvetica, sans-serif;line-height: 26px;margin:60px 0 0 -50px;
+    color: #756F71;}
+.banner_top ul li{text-shadow: 1px 1px 1px rgba(255, 255, 255, 1)}
+.banner_top ul .l1{
+  transform:translate(100px);opacity: 0;
+    animation:animations 2s ease-out forwards;}
+@-webkit-keyframes animations{
+    0%{-webkit-transform:translate(0);opacity:0;}
+   
+    70%{-webkit-transform:translate(70px);opacity:0.8;}
+    100%{-webkit-transform:translate(100px);opacity:1;}
+}
+ @-moz-keyframes animations{
+    0%{-moz-transform:translate(0);opacity:0;}
+    70%{-moz-transform:translate(70px);opacity:0.8;}
+    100%{-moz-transform:translate(100px);opacity:1;}
+}
+@keyframes animations{
+    0%{transform:translate(0);opacity:0;}
+    70%{transform:translate(70px);opacity:0.8;}
+    100%{transform:translate(100px);opacity:1;}
+}
+.banner_top ul .l2{
+  transform:translate(100px);opacity: 0;
+    animation:animations2 2s ease-out 2s forwards;}
+@-webkit-keyframes animations2{
+    0%{-webkit-transform:translate(0);opacity:0;}
+   
+    70%{-webkit-transform:translate(70px);opacity:0.8;}
+    100%{-webkit-transform:translate(100px);opacity:1;}
+}
+ @-moz-keyframes animations2{
+    0%{-moz-transform:translate(0);opacity:0;}
+    70%{-moz-transform:translate(70px);opacity:0.8;}
+    100%{-moz-transform:translate(100px);opacity:1;}
+}
+@keyframes animations2{
+    0%{transform:translate(0);opacity:0;}
+    70%{transform:translate(70px);opacity:0.8;}
+    100%{transform:translate(100px);opacity:1;}
+}
+
+.banner_top ul .l3{
+  transform:translate(100px);opacity: 0;
+    animation:animations3 2s ease-out 4s forwards;}
+@-webkit-keyframes animations3{
+    0%{-webkit-transform:translate(100px);opacity:0;}
+   
+    70%{-webkit-transform:translate(100px);opacity:0.8;}
+    100%{-webkit-transform:translate(100px);opacity:1;}
+}
+ @-moz-keyframes animations3{
+    0%{-moz-transform:translate(100px);opacity:0;}
+    70%{-moz-transform:translate(100px);opacity:0.8;}
+    100%{-moz-transform:translate(100px);opacity:1;}
+}
+@keyframes animations3{
+    0%{transform:translate(100px);opacity:0;}
+    70%{transform:translate(100px);opacity:0.8;}
+    100%{transform:translate(100px);opacity:1;}
+}
+
+
+
+
+/**---------------------**/
+.nav_top{padding-top:60px; }
+.box{margin:0 auto;width:980px;position:relative;}
+.nav{width:76px;}
+.table{width:816px;}
+.tabbale{}
+.tab-content{position:absolute;left:150px;top:50px;}
+
+/*----------------------------------------------------*/
+.topnav{position: absolute;top: 50px;right:60px;}
+.topnav a{text-decoration:none;text-shadow: 0px 0px 5px #f28e98;color:#fff;}
+.topnav li{float: left;width:80px;font-size:24px;text-align: center;}
+.topnav a span:first-child { z-index: 2; display: block; }
+.topnav a span:last-child { z-index: 1; display: block; color: #fff; font: 20px Georgia, serif; opacity: 0; -webkit-transition: -webkit-transform 0.3s, opacity 0.3s; -moz-transition: -moz-transform 0.3s, opacity 0.3s; transition: transform 0.3s, opacity 0.3s; -webkit-transform: translateY(-100%); -moz-transform: translateY(-100%); transform: translateY(-100%); text-align: center }
+.topnav a:hover span:last-child, .topnav a:focus span:last-child { opacity: 1; -webkit-transform: translateY(0%); -moz-transform: translateY(0%); transform: translateY(0%); }
+.topnav a:hover {color: #428bca;} 
+.banner_top{position: relative;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+了解ES6特性，phoneGap 微信开发，canvas svg|一般|24
+了解PHP/nodjs后台语言，SVN/Git管理工具，Grunt/Gulp前端自动化工具|一般|24
+熟悉Ajax/jsonp数据交互技术，熟悉标准化的HTML5/CSS3新特性|良好|24
+熟练掌握移动端响应式布局技巧|熟练|24
+熟悉各种前端流行框架bootstrap/jQuery/AngularJs...|熟练|24
+熟练掌握JavaScript开发语言|熟练|24
+熟悉W3C标准，了解各主流浏览器特性，使页面兼容主流浏览器|熟练|24
+熟练掌握HTML/CSS前端开发技术|熟练|24

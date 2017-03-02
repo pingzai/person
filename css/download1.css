@@ -1,0 +1,18 @@
+body{min-height:700px;}
+.fl{float:left;}
+.td-width{width:549px;}
+.w{margin:0 auto;width:980px;}
+*{margin:0;padding:0;list-style:none;}
+/**---------------------**/
+
+.banner_top{height:210px; background:url(../img/banner_top.jpg) no-repeat top center;margin:0 auto; overflow:hidden;}
+.banner_h2{text-shadow: 0px 0px 5px #f28e98;color:#8ba4c3;}
+
+
+
+/**---------------------**/
+.nav_top{padding-top:60px; }
+.box{margin:0 auto;width:980px;position:relative;}
+.nav{width:76px;}
+.table{width:816px;}
+.tab-content{position:absolute;left:150px;top:50px;}

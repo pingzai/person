@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>个人简历</title>
+<link rel="stylesheet" href="../css/jquery.fullPage.css">
+<link rel="stylesheet" href="../css/resume.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery-ui-1.10.3.min.js"></script>
+<script src="../js/jquery.fullPage.min.js"></script>
+<script>
+$(document).ready(function() {
+	$.fn.fullpage({
+		slidesColor: ['#0075D1', '#C2E5FF', '#FDF6E1', '#E9E9E9', '#F3F3F3', '#F9F3DC'],
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+		menu: '#menu',
+		afterRender: function(){
+			$('.screen-main span').each(function(){
+				var $rel = $(this).attr('rel');
+				var $arr = $rel.split(',');
+				$(this).animate({
+					left: $arr[2] + 'px',
+					top: $arr[3] + 'px'
+				}, 500);
+			});
+			$('.inner a').each(function(){
+				var $rel = $(this).attr('rel');
+				var $arr = $rel.split(',');
+				$(this).animate({
+					left: $arr[0] + 'px',
+					top: $arr[1] + 'px'
+				}, 500);
+			});
+		},
+		afterLoad: function(anchorLink, index){
+			if(index == 1){
+				$('.screen-main span').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[2] + 'px',
+						top: $arr[3] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 2 || index == 3 || index == 4 || index == 5){
+				$('.inner').eq(index - 2).find('a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[2] + 'px',
+						top: $arr[3] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 6){
+				$('.zanzhu-con a').fadeIn(1000);
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == 1){
+				$('.screen-main span').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[0] + 'px',
+						top: $arr[1] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 2 || index == 3 || index == 4 || index == 5){
+				$('.inner').eq(index - 2).find('a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[0] + 'px',
+						top: $arr[1] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 6){
+				$('.zanzhu-con a').fadeOut(1000);
+			}
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="page1" class="active"><a href="#page1">TOP</a></li>
+	<li data-menuanchor="page2"><a href="#page2">专业技能</a></li>
+	<li data-menuanchor="page3"><a href="#page3">工作经历</a></li>
+	<li data-menuanchor="page4"><a href="#page4">项目经验</a></li>
+	<li data-menuanchor="page5"><a href="#page5">自我评价</a></li>
+	
+</ul>
+
+<div class="section section1">
+	<div class="screen-main">
+		<span class="ji4"  rel="-200,350,50,50"><a href="../index.html">返回首页</a></span>
+		<span class="shi1"  rel="-501,100,450,100">前端开发工程师个人简历</span>
+		<span class="shi2"  rel="-200,650,200,330">姓名</span>
+		<span class="shi3"  rel="-200,650,200,380">陆平</span>
+		<span class="shi4"  rel="-200,350,400,330">性别</span>
+		<span class="ji1"  rel="-200,350,410,380">男</span>
+		<span class="ji2"  rel="1000,350,620,330">电话</span>
+		<span class="ji3"  rel="1000,350,590,380">17600112390</span>
+		<span class="year2"  rel="1000,650,900,330">邮箱</span>
+		<span class="year0"  rel="1000,650,830,380">luping_bj@sina.com</span>
+		
+	</div>
+</div>
+
+<div class="section">
+	<div class="science-inner inner">
+		<a class="stiteml st1" href="javascript:void(0)" rel="0,-350,0,17">熟练掌握HTML/CSS前端开发技术</a>
+		<a class="stiteml st2" href="javascript:void(0)" rel="0,-350,0,47">熟悉W3C标准</a>
+		<a class="stiteml st3" href="javascript:void(0)" rel="0,-350,0,78">了解各主流浏览器特性</a>
+		<a class="stiteml st4" href="javascript:void(0)" rel="0,-350,0,108">使页面兼容主流浏览器</a>
+		<a class="stiteml st5" href="javascript:void(0)" rel="1010,116,584,22">熟练掌握JavaScript开发语言</a>
+		<a class="stiteml st6" href="javascript:void(0)" rel="1010,146,584,52">了解面向对象机制</a>
+		<a class="stiteml st7" href="javascript:void(0)" rel="1010,163,584,82">熟悉各种前端流行框架<br>bootstrap/jQuery/AngularJs/...</a>
+		<a class="stitemr st9" href="javascript:void(0)" rel="-710,346,0,356">了解PHP/nodjs后台语言</a>
+		<a class="stitemr st10" href="javascript:void(0)" rel="-710,376,0,386">了解SVN/Git管理工具</a>
+		<a class="stitemr st11" href="javascript:void(0)" rel="-710,406,0,416">了解Grunt/Gulp前端自动化工具</a>
+		<a class="stiteml st12" href="javascript:void(0)" rel="-710,446,0,446">熟悉Ajax/jsonp数据交互技术</a>
+		<a class="stiteml st13" href="javascript:void(0)" rel="761,1050,700,356">熟悉标准化的HTML5/CSS3新特性</a>
+		<a class="stiteml st14" href="javascript:void(0)" rel="761,1050,700,386">熟练掌握移动端响应式布局技巧</a>
+		<a class="stiteml st15" href="javascript:void(0)" rel="761,1050,700,416">了解ES6特性 微信小程序</a>
+		<a class="stiteml st16" href="javascript:void(0)" rel="761,1050,700,446">了解phoneGap 微信开发</a>
+		<a class="stiteml st17" href="javascript:void(0)" rel="761,1050,700,476">了解canvas svg</a>
+		<a class="stimg1" href="javascript:void(0)" rel="0,-350,0,173"><img width="181" height="166" src="../img/work11.jpg"></a>
+		<a class="stimg2" href="javascript:void(0)" rel="980,2,380,22"><img width="181" height="166" src="../img/work4.jpg"></a>
+		<a class="stimg3" href="javascript:void(0)" rel="-407,350,380,330"><img width="181" height="166" src="../img/work3.jpg"></a>
+		<a class="stimg4" href="javascript:void(0)" rel="761,850,701,173"><img width="181" height="166" src="../img/work5.jpg"></a>
+	</div>
+</div>
+
+<div class="section">
+	<div class="famous-inner inner">
+		<a class="faitemr fa1" href="javascript:void(0)"  rel="90,-180,350,68">工作经历</a>
+		
+		<a class="faiteml fa2" href="javascript:void(0)" rel="-500,203,35,200">2015.07-2016.12</a>
+		<a class="faiteml fa3" href="javascript:void(0)" rel="-500,227,35,227">哈尔滨润河科技有限公司</a>
+		<a class="faiteml fa4" href="javascript:void(0)" rel="-500,290,35,250">负责公司页面维护与制作
+		<br>负责微信端页面、H5页面<br />PC定宽以及响应式页面制作<br>配合后台工程师完成项目开发<br>负责分析一些需求，以及页面的布局</a>
+
+		
+	</div>
+</div>
+<div class="section">
+	<div class="social-inner inner">
+		<a class="soiteml so1" href="javascript:void(0)" rel="450,-175,400,10">项目经验</a>
+		<a class="soiteml so8" href="javascript:void(0)" rel="-520,51,0,101">某医疗平台手机端</a>
+		<a class="soiteml so2" href="javascript:void(0)" rel="-520,110,0,130">运用HTML+CSS+jQuery以及rem实现响应式页面制作</a>
+		<a class="soiteml so3" href="javascript:void(0)" rel="-520,140,0,152">运用jQuery以及swiper实现页面的一些动画以及轮播图<br />运用地图API实现定位效果</a>
+		<a class="soiteml so4" href="javascript:void(0)" rel="980,228,450,288">某电商pc端</a>
+		<a class="soiteml so5" href="javascript:void(0)" rel="980,258,450,318">负责网站前台部分页面，网站主页和详情页</a>
+		<a class="soiteml so6" href="javascript:void(0)" rel="980,288,450,348">实现静态交互效果，主要运用原生JavaScript和jQuery</a>
+		<a class="soiteml so7" href="javascript:void(0)" rel="980,318,450,378">运用ajax和后台进行交互完成效果</a>
+		
+		<a class="soiteml so10" href="javascript:void(0)" rel="-405,369,0,420">个人博客</a>
+		<a class="soiteml so11" href="javascript:void(0)" rel="-405,434,0,454">负责设计和实现响应式页面</a>
+		<a class="soiteml so12" href="javascript:void(0)" rel="-405,464,0,484">运用bootstrap和jQuery实现轮播图和动画</a>
+		<a class="soiteml so13" href="javascript:void(0)" rel="-405,494,0,514">运用fullPage插件以及css3实现动画效果</a>
+		<a class="soiteml so14" href="javascript:void(0)" rel="-405,524,0,544">运用jsonp实现跨域取数据</a>
+		
+		
+		<a class="soimg2" href="javascript:void(0)" rel="-405,186,100,216"><img width="310" height="165" src="../img/work13.png"></a>
+		<a class="soimg3" href="javascript:void(0)" rel="980,100,550,100"><img width="310" height="166" src="../img/work14.png"></a>
+		<a class="soimg4" href="javascript:void(0)" rel="507,850,547,424"><img width="310" height="169" src="../img/work15.png"></a>
+	</div>
+</div>
+
+<div class="section">
+	<div class="net-inner inner">
+		<a class="netitemr net1" href="javascript:void(0)" rel="19,-240,440,56">自我评价</a>
+		
+		<a class="netiteml net7" href="javascript:void(0)" rel="980,-1,265,140">1.熟练掌握网站制作的相关技术，移动端开发流程和布局</a>
+		<a class="netiteml net8" href="javascript:void(0)" rel="980,28,265,170">2.能在较短的时间内适应工作,学习能力强，有较好的IT职业素养</a>
+		<a class="netiteml net9" href="javascript:void(0)" rel="980,50,265,200">3.性格开朗能很好的与人沟通，具有团队合作精神</a>
+		
+		<a class="netiteml net13" a href="javascript:void(0)"  rel="-435,265,265,230">4.有较强的耐性和责任心，沉稳上进善于钻研</a>
+		<a class="netiteml net15" a href="javascript:void(0)" rel="-435,351,265,260">5.对前端开发有浓厚的兴趣，有较强的逻辑思考能力</a>
+		<a class="netiteml net16" a href="javascript:void(0)"  rel="-435,428,265,290">6.对工作会付出全部热情，力争在最短时间内完成目标</a>
+		
+	</div>
+</div>
+
+
+
+</body>
+</html>
